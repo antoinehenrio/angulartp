@@ -7,8 +7,10 @@
  
     todoList.addTodo = function() {
       todoList.todos.push({text:todoList.todoText});
+	  console.log(todoList.todoText);
       todoList.todoText = '';
 	  todoList.todos.push({text:todoList.todoSector});
+	  console.log(todoList.todoSector);
       todoList.todoSector = '';
 	  todoList.todos.push({text:todoList.todoLeader});
       todoList.todoLeader = '';
@@ -20,13 +22,5 @@
         count += todo.done ? 0 : 1;
       });
       return count;
-    };
- 
-    todoList.archive = function() {
-      var oldTodos = todoList.todos;
-      todoList.todos = [];
-      angular.forEach(oldTodos, function(todo) {
-        if (!todo.done) todoList.todos.push(todo);
-      });
     };
   });

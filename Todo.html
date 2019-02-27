@@ -6,17 +6,17 @@
     <link rel="stylesheet" href="todo.css">
   </head>
   <body>
-    <h2>Entreprises du CAC40</h2>
+    <h2>Entreprises du CAC 40</h2>
     <div ng-controller="TodoListController as todoList">
       <tr ng-repeat="todo in todoList.todos" class="unstyled">
         <td>
-            <span>{{todoText.text}}</span>
+            <span>{{todoList.TodoText}}</span>
         </td>
 		<td>
-            <span>{{todo.text}}</span>
+            <span>{{todoList.Todotext}}</span>
         </td>
 		<td>
-            <span>{{todo.text}}</span>
+            <span>{{todoLeader.text}}</span>
         </td>
       </tr>
       <form ng-submit="todoList.addTodo()">
