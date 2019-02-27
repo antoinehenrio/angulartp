@@ -20,7 +20,11 @@
       </ul>
       <form ng-submit="todoList.addTodo()">
         <input type="text" ng-model="todoList.todoText"  size="30"
-               placeholder="add new todo here">
+               placeholder="Entrez le nom de l'entreprise" class="CompanyInput">
+		<input type="text" ng-model="todoList.todoText"  size="30"
+               placeholder="Entrez son secteur" class="CompanyInput">
+		<input type="text" ng-model="todoList.todoText"  size="30"
+               placeholder="Entrez son dirigeant" class="CompanyInput">
         <input class="btn-primary" type="submit" value="add">
       </form>
     </div>
