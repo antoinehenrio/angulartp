@@ -2,12 +2,16 @@
   .controller('TodoListController', function() {
     var todoList = this;
     todoList.todos = [
-      {text:'learn AngularJS', done:true},
-      {text:'build an AngularJS app', done:false}];
+      {text:'learn AngularJS'},
+      {text:'build an AngularJS app'}];
  
     todoList.addTodo = function() {
-      todoList.todos.push({text:todoList.todoText, done:false});
+      todoList.todos.push({text:todoList.todoText});
       todoList.todoText = '';
+	  todoList.todos.push({text:todoList.todoSector});
+      todoList.todoSector = '';
+	  todoList.todos.push({text:todoList.todoLeader});
+      todoList.todoLeader = '';
     };
  
     todoList.remaining = function() {
